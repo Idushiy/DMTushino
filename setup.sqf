@@ -62,7 +62,7 @@
 //#define __DM_FORCE_TIME__
 
 // wenn nicht auskommentiert mit // spawnen alle Units (auch Spieler) ohne Map. Die Map muss explizit hinzugefügt werden (player/unit addWeapon "ACE_Map")
-//#define __DM_MAP__
+#define __DM_MAP__
 
 // auskommentieren und weder der Spieler noch sonst eine KI Einheit hat ein NVG
 #define __DM_NO_NVG__

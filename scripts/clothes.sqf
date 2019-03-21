@@ -18,7 +18,14 @@ clothes = [
 	"rhs_uniform_msv_emr",
 	"LOP_U_CDF_Fatigue_01",
 	"PBW_Uniform3K_fleck",
-	"rhsgref_uniform_3color_desert"
+	"rhsgref_uniform_altis_lizard",
+	"usm_bdu_w",
+	"TRYK_U_B_NATO_OCPD_CombatUniform",
+	"rhsgref_uniform_3color_desert",
+	"rhs_uniform_FROG01_d",
+	"LOP_U_AM_Fatigue_01",
+	"LOP_U_TKA_Fatigue_02",
+	"rhs_uniform_acu_ucp"
 ];
 
 
@@ -122,7 +129,7 @@ if (dm_uniform == "rhs_uniform_FROG01_wd") then {
                 }
 };
 
-
+////
 if (dm_uniform == "rhsgref_uniform_3color_desert") then {
 
     _unit addHeadgear "ssh68_camo_yel";
@@ -147,7 +154,7 @@ if (dm_uniform == "rhsgref_uniform_3color_desert") then {
     _unit linkItem "tf_fadak";
 };
 
-
+///
 if (dm_uniform == "rhs_uniform_msv_emr") then {
     _unit addVest "rhs_6b23_digi_6sh92";
     _unit addHeadgear "rhs_6b27m_digi";
@@ -167,7 +174,7 @@ if (dm_uniform == "rhs_uniform_msv_emr") then {
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
 };
 
-
+///
 if (dm_uniform == "LOP_U_CDF_Fatigue_01") then {
     _unit addVest "LOP_V_6B23_CDF";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_30Rnd_545x39_AK";};
@@ -188,6 +195,8 @@ if (dm_uniform == "LOP_U_CDF_Fatigue_01") then {
     _unit linkItem "ItemRadio";
 };
 
+
+///
 if (dm_uniform == "PBW_Uniform3K_fleck") then {
     _unit addVest "pbw_splitter_schtz";
     _unit addBackpack "BWA3_Carryall_Fleck";
@@ -210,4 +219,204 @@ if (dm_uniform == "PBW_Uniform3K_fleck") then {
     for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_DM51A1";};
     for "_i" from 1 to 4 do {_unit addItemToVest "BWA3_DM25";};
     _unit addItemToBackpack "BWA3_Pzf3_IT";
+};
+
+////
+if (dm_uniform == "rhsgref_uniform_altis_lizard") then {
+
+_unit addVest "TRYK_V_harnes_od_L";
+_unit addBackpack "tf_bussole";
+_unit addHeadgear "rhsgref_helmet_pasgt_altis_lizard";
+
+_unit addItemToVest "hlc_20rnd_762x51_b_G3";
+
+_unit addWeapon "hlc_rifle_g3a3ris";
+_unit addPrimaryWeaponItem "BWA3_optic_RSAS";
+_unit addWeapon "Binocular";
+
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemRadio";
+_unit linkItem "ItemGPS";
+
+
+for "_i" from 1 to 6 do {_unit addItemToVest "hlc_20rnd_762x51_b_G3";};
+for "_i" from 1 to 2 do {_unit addItemToVest "hlc_20rnd_762x51_t_G3";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m67";};
+
+};
+
+///
+if (dm_uniform == "usm_bdu_w") then {
+_unit addBackpack "B_Carryall_Base";
+_unit addItem "rhs_100Rnd_762x54mmR";
+
+_unit addWeapon "rhs_weap_pkm";
+removeBackpack _unit;
+_unit addVest "LOP_V_6B23_6Sh92_OLV";
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_100Rnd_762x54mmR";};
+
+_unit addItemToVest "rhs_mag_rgd5";
+_unit addItemToVest "rhs_mag_rdg2_white";
+
+_unit addHeadgear "LOP_H_6B27M_WDL";
+_unit addGoggles "TRYK_Shemagh";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemRadio";
+_unit linkItem "tf_microdagr";
+};
+
+////
+if (dm_uniform == "TRYK_U_B_NATO_OCPD_CombatUniform") then {
+
+for "_i" from 1 to 2 do {_unit addItemToUniform "RH_7Rnd_45cal_m1911";};
+_unit addVest "rhsusf_spcs_ocp_medic";
+for "_i" from 1 to 7 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_PMAG";};
+
+_unit addHeadgear "rhsusf_opscore_mar_ut_pelt";
+_unit addGoggles "rhsusf_oakley_goggles_clr";
+
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m67";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
+
+_unit addItemToUniform "ACE_bodyBag";
+
+_unit addWeapon "rhs_weap_mk18";
+_unit addPrimaryWeaponItem "rhsusf_acc_nt4_tan";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15";
+_unit addPrimaryWeaponItem "RH_t1";
+_unit addPrimaryWeaponItem "rhsusf_acc_grip2";
+_unit addWeapon "RH_kimber_nw";
+
+
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "tf_microdagr";
+_unit linkItem "tf_anprc148jem_1";
+_unit linkItem "A3_GPNVG18_F";
+_unit linkItem "ItemGPS";
+
+_unit addItemToUniform "ACE_Flashlight_MX991";
+};
+
+///
+if (dm_uniform == "rhs_uniform_FROG01_d") then {
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_epinephrine";};
+_unit addItemToUniform "ACE_EarPlugs";
+_unit addItemToUniform "ACE_tourniquet";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_morphine";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_quikclot";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_packingBandage";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_elasticBandage";};
+_unit addVest "CUP_V_BAF_Osprey_Mk2_DDPM_Soldier1";
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m67";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_red";};
+_unit addItemToVest "rhsusf_200Rnd_556x45_box";
+_unit addItemToVest "rhsusf_200rnd_556x45_mixed_box";
+_unit addBackpack "B_Kitbag_tan";
+for "_i" from 1 to 2 do {_unit addItemToBackpack "rhsusf_200Rnd_556x45_box";};
+_unit addItemToBackpack "rhsusf_200rnd_556x45_mixed_box";
+_unit addHeadgear "rhsusf_lwh_helmet_marpatd_headset";
+
+_unit addWeapon "rhs_weap_m249";
+
+_unit linkItem "ItemMap";
+_unit linkItem "ItemWatch";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemRadio";
+};
+
+if (dm_uniform == "LOP_U_AM_Fatigue_01") then {
+
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_epinephrine";};
+_unit addItemToUniform "ACE_EarPlugs";
+_unit addItemToUniform "ACE_tourniquet";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_morphine";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_quikclot";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_packingBandage";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_elasticBandage";};
+_unit addVest "V_BandollierB_rgr";
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+for "_i" from 1 to 4 do {_unit addItemToVest "rhs_10Rnd_762x54mmR_7N1";};
+for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_9x18_8_57N181S";};
+_unit addBackpack "B_FieldPack_cbr";
+for "_i" from 1 to 15 do {_unit addItemToBackpack "rhs_10Rnd_762x54mmR_7N1";};
+_unit addHeadgear "H_ShemagOpen_khk";
+
+_unit addWeapon "rhs_weap_svdp_wd";
+_unit addPrimaryWeaponItem "rhs_acc_pso1m2";
+_unit addWeapon "rhs_weap_makarov_pm";
+
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
+_unit linkItem "ItemRadio";
+};
+
+///
+if (dm_uniform == "LOP_U_TKA_Fatigue_02") then {
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_epinephrine";};
+_unit addItemToUniform "ACE_MapTools";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_morphine";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_quikclot";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_elasticBandage";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_packingBandage";};
+_unit addItemToUniform "ACE_EarPlugs";
+_unit addItemToUniform "ACE_tourniquet";
+_unit addVest "V_TacVest_oli";
+for "_i" from 1 to 5 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_desert_AK";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
+_unit addItemToVest "rhs_30Rnd_545x39_AK_plum_green";
+_unit addBackpack "tf_mr3000_bwmod";
+_unit addHeadgear "rhssaf_bandana_smb";
+
+_unit addWeapon "rhs_weap_ak74m_desert";
+_unit addPrimaryWeaponItem "rhs_acc_dtk1983";
+_unit addPrimaryWeaponItem "rhs_acc_pkas";
+_unit addWeapon "Binocular";
+
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
+_unit linkItem "ItemRadio";
+_unit linkItem "ItemGPS";
+};
+
+
+///
+if (dm_uniform == "rhs_uniform_acu_ucp") then {
+_unit forceAddUniform "rhs_uniform_acu_ucp";
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_packingBandage";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_elasticBandage";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_quikclot";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_morphine";};
+_unit addItemToUniform "ACE_tourniquet";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_epinephrine";};
+_unit addVest "rhsusf_iotv_ucp_Rifleman";
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_red";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m67";};
+for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_200Rnd_556x45_box";};
+_unit addBackpack "B_Kitbag_rgr";
+for "_i" from 1 to 2 do {_unit addItemToBackpack "rhsusf_200Rnd_556x45_box";};
+_unit addItemToBackpack "rhsusf_200rnd_556x45_mixed_box";
+_unit addHeadgear "rhsusf_ach_helmet_headset_ucp";;
+
+_unit addWeapon "hlc_m249_pip4";
+_unit addPrimaryWeaponItem "rhsusf_acc_ARDEC_M240";
+_unit addPrimaryWeaponItem "rhsusf_acc_ELCAN";
+_unit addPrimaryWeaponItem "rhsusf_acc_harris_bipod";
+
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
+_unit linkItem "ItemRadio";
+_unit linkItem "ItemGPS";
 };

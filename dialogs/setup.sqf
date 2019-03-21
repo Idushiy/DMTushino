@@ -91,7 +91,7 @@
 // ----------- do not change anithing below this line! ------------
 //macros---------------------------------------------------------------------------
 #define __ccppfln(xfile1) call compile preprocessFileLineNumbers #xfile1
-#define __cppfln(xdfunc,xfile2) xdfunc = compile preprocessFileLineNumbers #xfile2
+//#define __cppfln(xdfunc,xfile2) xdfunc = compile preprocessFileLineNumbers #xfile2
 #define __XJIPGetVar(jvarname) (X_JIPH getVariable #jvarname)
 #define __XJIPSetVar X_JIPH setVariable
 

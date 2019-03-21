@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/DMTushino.Altis.iml" filepath="$PROJECT_DIR$/.idea/DMTushino.Altis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dm15_tequila.altis/.idea/dm15_tequila.altis.iml" filepath="$PROJECT_DIR$/../dm15_tequila.altis/.idea/dm15_tequila.altis.iml" />
     </modules>
   </component>
 </project>
