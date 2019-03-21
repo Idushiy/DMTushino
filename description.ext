@@ -1,0 +1,111 @@
+#include "setup.sqf"
+
+#ifdef __DEBUG__
+allowFunctionsLog = 1;
+#endif
+#include "cfgFunctions.hpp"
+
+
+author = __DM_MADEBY__;
+onLoadName = __DM_MISSION_NAME__;
+onLoadMission = __DM_MISSION_DESCRIPTION__;
+loadScreen = "img\logo.jpg";
+onLoadIntro = "Приготовиться...";
+
+respawn = "BASE";
+DisabledAI=0;
+#ifdef __DM_RESPAWN_DELAY__
+respawndelay = __DM_RESPAWN_DELAY__;
+#endif
+debriefing=1;
+joinUnassigned = 0;
+enableDebugConsole = 1;
+
+showCompass = 1;
+showGPS = 1;
+showMap = 1;
+
+
+
+class Header {
+	gameType = DM;
+	minPlayers = 2;
+	maxPlayers = __DM_PLNUM__;
+	playerCountMultipleOf = 1;
+};
+
+#ifdef __DM_DISABLE_CHAT_CHANNELS__
+disableChannels[] = __DM_DISABLE_CHAT_CHANNELS__;
+#endif
+
+class Params {
+	class timelimit {
+		title="Timelimit";
+		values[]={10000, 300, 600, 900, 1200, 1500, 1800, 2700, 3600, 7200};
+		texts[]={"NO LIMIT","5min","10min","15min","20min","25min","30min","45min","1h","2h"};
+		default=3600;
+	};
+	
+	class tcb_loadoutparam {
+		title="Default Weapons";
+		values[]={0, 1, 2, 3, 4, 5, 6, 7};
+		texts[]={"random all weapons", "random / without pistols", "random / without sniperrifles", "random / only standard rifles", "random / only machineguns", "random / only pistols", "only EBR 7.62mm", "only SMG's"};
+		default=0;
+	};
+	#ifdef __DM_CAMPERTIME__
+	class tcb_nocamper {
+		title="Anticamp";
+		values[]={0, 1};
+		texts[]={"disabled", "enabled"};
+		default=1;
+	};
+	#endif
+
+
+};
+
+
+#ifdef __DM_STOP_ITEMS_DROPPING__
+enableItemsDropping = 0;
+#else
+enableItemsDropping = 1;
+#endif
+
+class CfgIdentities {
+	class HQ_EN1 {
+		name = "Winters, HQ";
+		face = "Default";
+		glasses = "None";
+		speaker = "Male02ENG";
+		pitch = 1.0;
+	};
+	class HQ_EN2: HQ_EN1 {
+		name = "Meyers, HQ";
+	};
+	class HQ_RU1: HQ_EN1 {
+		name = "Rustov, HQ";
+		speaker = "Male01ENG";
+	};
+	class HQ_RU2: HQ_EN1 {
+		name = "Krustshov, HQ";
+		speaker = "Male01ENG";
+	};
+};
+
+
+//#include "music\music.hpp"
+//#include "sounds\sounds.hpp"
+#include "dialogs\rscBasicDefines.hpp"
+#include "dialogs\rscTitles.hpp"
+
+
+class CfgDebriefing {
+	class End1 {
+		title = "Закончили";
+		subtitle = "";
+		description = "";
+		//pictureBackground = "img\logo.jpg";
+		picture = "";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};
