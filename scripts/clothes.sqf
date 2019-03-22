@@ -107,8 +107,9 @@ if (dm_uniform == "rhs_uniform_FROG01_wd") then {
                 _unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_Stanag";
                 _unit addItemToVest "RH_7Rnd_45cal_m1911";
 
-                _unit addWeapon "rhs_weap_m4a1_blockII_KAC_wd";
                 _unit addPrimaryWeaponItem "rhsusf_acc_nt4_tan";
+                _unit addWeapon "rhs_weap_m4a1_blockII_KAC_wd";
+
                 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
                 _unit addPrimaryWeaponItem "rhsusf_acc_SpecterDR_OD";
                 _unit addWeapon "RH_kimber";
